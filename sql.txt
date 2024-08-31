@@ -1,0 +1,19 @@
+CREATE TABLE PRODUCT (
+    ProductID NUMBER PRIMARY KEY,
+    ProductName VARCHAR2(50) NOT NULL,
+    Price NUMBER(10, 2) NOT NULL,
+    -- other columns and constraints
+);
+
+CREATE TABLE ORDERS (
+    OrderID NUMBER PRIMARY KEY,
+    OrderAmount NUMBER(10, 2) NOT NULL,
+    -- other columns and constraints
+);
+
+
+
+ALTER TABLE PRODUCT ADD Category VARCHAR2(20);
+
+
+ALTER TABLE ORDERS ADD OrderDate DATE DEFAULT SYSDATE;
